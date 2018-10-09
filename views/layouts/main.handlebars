@@ -11,11 +11,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
     <style>
-        main {
-            background-image: .5% url("http://www.free-icons-download.net/images/thumbs-up-icon-80153.png");
+        body {
+
+            position: relative;
+            z-index: -10;
             /* background-opacity: .7%; */
-            /* opacity: .5%; */
-            /* background: repeating-radial-gradient(#e66465, #9198e5 20%); */
+            opacity: .5%;
+            width: 100%;
+            height: 100%;
+            background: repeating-radial-gradient(whitesmoke, orangered 100%);
             /* The image used */
             /* Used if the image is unavailable */
             /* height: 500px; */
@@ -23,12 +27,9 @@
             background-position: center;
             /* Center the image */
             background-repeat: no-repeat;
-            /* background-color: #F2F6D0; */
-            background-size: .5%;
+            background-size: cover;
 
         }
-
-
 
         .jumbotron {
             position: relative;
@@ -100,6 +101,7 @@
             overflow: auto;
             width: 60%;
             height: 700px;
+            font: bold;
         }
 
         #notes {
@@ -117,6 +119,7 @@
 
         input {
             height: 36px;
+
             font-size: 24px;
         }
 

@@ -155,7 +155,7 @@ app.post("/articles/:id", function(req, res) {
     })
     // new:true takes the copy of the article object with the updated note, because return kicks you out if whatever follows the return keyword works, if we return, without specifying new, the old Article model will be returned, but you need returns with chained .thens, or .thens following one after another, because it will be following up gets and posts with multiple after statments/confirmations which are the .thens. But .then chains do build on each other so they are useful when using multiple collections
     .then(function(dbArticle) {
-      // If we were able to successfully update an Article, send it back to the client
+      // If we were able to successfully update an Article, send it back to the client ... formerly res.send(dbArticle);
       res.json(dbArticle);
     })
     .catch(function(err) {
