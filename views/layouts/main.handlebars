@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <base href="/">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+        main {
+            background-image: .5% url("http://www.free-icons-download.net/images/thumbs-up-icon-80153.png");
+            /* background-opacity: .7%; */
+            /* opacity: .5%; */
+            /* background: repeating-radial-gradient(#e66465, #9198e5 20%); */
+            /* The image used */
+            /* Used if the image is unavailable */
+            /* height: 500px; */
+            /* You must set a specified height */
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* background-color: #F2F6D0; */
+            background-size: .5%;
+
+        }
+
+
+
+        .jumbotron {
+            position: relative;
+            background: repeating-radial-gradient( orangered,
+            papayawhip 80%);
+            height: 80%;
+            animation-name: rotate;
+            animation-duration: 60s;
+            /* animation-direction:  */
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            -moz-animation-name: rotate;
+            -moz-animation-duration: 60s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            z-index: -1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 12%;
+            /* width: 10%; */
+            /* height: 25%; */
+            position: relative;
+            background: repeating-radial-gradient( orangered,
+            papayawhip 80%);
+            height: 80%;
+            animation-name: rotate;
+            animation-duration: 60s;
+            animation-direction: 180deg;
+            /* transform: rotate(180deg); */
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            -moz-animation-name: rotate;
+            -moz-animation-duration: 60s;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            z-index: -1;
+        }
+
+        @keyframes rotate {
+            from {
+                -moz-transform: rotate(0deg);
+            }
+            to {
+                -moz-transform: rotate(360deg);
+            }
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+
+        .container {
+            background-color: radial-gradient(circle,
+            orange,
+            peachpuff);
+            width: 960px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 5%;
+        }
+
+        #articles {
+            display: inline-block;
+            overflow: auto;
+            width: 60%;
+            height: 700px;
+        }
+
+        #notes {
+            float: right;
+            width: 30%;
+        }
+
+        textarea,
+        input {
+            display: block;
+            width: 100%;
+            /* background-color: #FCF5C7; */
+            background-color: #cccccc;
+        }
+
+        input {
+            height: 36px;
+            font-size: 24px;
+        }
+
+        textarea {
+            height: 200px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    {{{body}}}
+</body>
+
+</html>

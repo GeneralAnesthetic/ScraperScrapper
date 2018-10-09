@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-
+var path = require("path");
 // Our scraping tools
 // Axios is a promised-based http library, similar to jQuery's Ajax method. Axios is similiar to 'request'. It works with REACT
 // It works on the client and on the server
@@ -17,7 +17,10 @@ var PORT = process.env.PORT || 3042;
 
 // Initialize Express
 var app = express();
+var exphbs = require("express-handlebars");
 
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
 // Configure middleware
 
 // Use morgan logger for logging requests
@@ -38,12 +41,19 @@ mongoose.connect(
   MONGODB_URI,
   { useNewUrlParser: true }
 );
+// var routes = require("./controllers/burgersController.js");
 
+// app.use("/", routes);
 // Connect to the Mongo DB
 // mongoose.connect(
 //   "mongodb://localhost:27017/scraper",
 //   { useNewUrlParser: true }
 // );
+app.get("/", function(req, res) {
+  res.render("index");
+});
+// res.sendFile("/articles");
+// C:\Users\Brain\Desktop\ScraperScrapper\views\layouts\main.handlebars
 
 // Routes
 // gets are like gimmie-gimmie-gimmies, give me the data from this URL
