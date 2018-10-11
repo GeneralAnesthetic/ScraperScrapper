@@ -45,11 +45,14 @@ mongoose.Promise = Promise;
 mongoose
   .connect(
     process.env.MONGODB_URI || "mongodb://localhost/scraper",
-    // "mongodb://myUsername:myPassword@ds161039.mlab.com:61039/accounttest"
+    // "mongodb://<dbuser>:<dbpassword>@ds125453.mlab.com:25453/heroku_3sh7k1r4"
+    //  "mongodb://localhost/scraper",   or "mongodb://localhost/:27017?/scraper"
     { useNewUrlParser: true }
   )
   .then(result => {
-    console.log("connected!");
+    console.log(
+      "connected!-----------------------------------------------------------"
+    );
   })
   .catch(err => {
     console.log("error", err);

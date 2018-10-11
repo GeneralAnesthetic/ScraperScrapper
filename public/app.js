@@ -15,6 +15,22 @@ $.getJSON("/articles", function(data) {
   }
 });
 
+$.get("/scrape", function(data) {
+  console.log(data);
+  for (var i = 0; i < data.length; i++) {
+    // Display the apropos information on the page
+    $("#articles").append(
+      "<strong><p data-id='" +
+        data[i]._id +
+        "'>" +
+        data[i].title +
+        "<br />" +
+        data[i].link +
+        "</p></strong>"
+    );
+  }
+});
+
 // Whenever someone clicks a p tag
 $(document).on("click", "p", function() {
   // Empty the notes from the note section
